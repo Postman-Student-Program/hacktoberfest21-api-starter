@@ -31,9 +31,7 @@ Endpoints:
 
 To see what types of responses your API should return, check out the [schema](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/api/b8ee9c39-4eb5-46c0-94e0-d643d9064ba9/version/77aea2ac-8b58-4314-82a6-847b40547c1f?tab=define). 
 
-Your API will need to pass the series of tests in this collection: 
-
-[Test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation)
+Your API will need to pass the series of tests in this collection: [Test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation)
 
 ### How to use the API 
 
@@ -63,9 +61,9 @@ In the "About" section in the upper-right of the repo, click the Settings icon. 
 
 #### Clone your forked repo 
 
-### Building your website
+### Building your API
 
-#### Fork the Halloween Costume Contest API mock server in Postman
+#### Fork the Halloween Costume Contest API tests in Postman
 
 #### Make those pull requests!
 
