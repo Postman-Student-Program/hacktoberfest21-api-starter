@@ -33,9 +33,9 @@ To see what types of responses your API should return, check out the [schema](ht
 
 Your API will need to pass the series of tests in this collection when run with the [Collection Runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/): [Test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation)
 
-### How to use the tests 
+### Testing your API server 
 
-In the API-First approach, a collection of test requests been created based off of the Halloween Costume Contest API. 
+In the API-First approach, a collection of test requests been created based off of the Halloween Costume Contest API schema.
 
 You can fork the [test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation) in Postman to your own workspace. Then, update the `baseUrl` collection variable to the address of your API (ex: `http://localhost:3000` for a local server, or `https://my-deployed-api.herokuapp.com` if deployed) and save. 
 
