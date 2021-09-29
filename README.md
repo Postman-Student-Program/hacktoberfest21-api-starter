@@ -29,7 +29,7 @@ Endpoints:
 - PATCH /contestants/:id/upvote
 ```
 
-To see what types of responses your API should return, check out the [schema](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/api/b8ee9c39-4eb5-46c0-94e0-d643d9064ba9/version/77aea2ac-8b58-4314-82a6-847b40547c1f?tab=define). 
+To see what types of responses your API should return, check out the [schema](https://www.postman.com/postman/workspace/postman-hacktoberfest-21/api/b8ee9c39-4eb5-46c0-94e0-d643d9064ba9/version/77aea2ac-8b58-4314-82a6-847b40547c1f?tab=define) or [documentation](https://www.postman.com/postman/workspace/postman-hacktoberfest-21/documentation/15567703-097eb31d-3c5a-4b40-90de-870efc823a94). 
 
 Your API will need to pass the series of tests in this collection when run with the [Collection Runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/): [Test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation)
 
@@ -37,7 +37,7 @@ Your API will need to pass the series of tests in this collection when run with 
 
 In the API-First approach, a collection of test requests been created based off of the Halloween Costume Contest API schema.
 
-You can fork the [test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation) in Postman to your own workspace. Then, update the `baseUrl` collection variable to the address of your API (ex: `http://localhost:3000` for a local server, or `https://my-deployed-api.herokuapp.com` if deployed) and save. 
+You can fork the [test collection](https://www.postman.com/postman/workspace/postman-hacktoberfest-21/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation) in Postman to your own workspace. Then, update the `baseUrl` collection variable to the address of your API (ex: `http://localhost:3000` for a local server, or `https://my-deployed-api.herokuapp.com` if deployed) and save. 
 
 Now when you run the [collection runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/) on this collection, you will see which tests fail. The goal is to make all the tests pass by adding code to your project! This is called **Test Driven Development (TDD)**.
 
