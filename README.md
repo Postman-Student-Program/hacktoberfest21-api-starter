@@ -74,7 +74,7 @@ You will need to have [git](https://git-scm.com/book/en/v2/Getting-Started-Insta
 
 You can chose any tech stack you like. If you've never built an API before or want a quick start, you can use Postman's API code genereator feature (in Beta) to download a boiler of the server code based on the API schema. 
 
-You can do this in Postman for web to access the Beta feature. First, go to the API and select the versino `0.0.1`. Then, in the far right menu in Postman, click the `</>` icon to open the code generator.
+You can do this in Postman for web to access the Beta feature. First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman, click the `</>` icon to open the code generator.
 
 <img src="https://user-images.githubusercontent.com/9841162/134787853-c70d6aa7-c46b-485e-b5de-f0a0408182bf.png" height="200px"/>
 
