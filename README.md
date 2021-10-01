@@ -33,22 +33,6 @@ To see what types of responses your API should return, check out the [schema](ht
 
 Your API will need to pass the series of tests in this collection when run with the [Collection Runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/): [Test collection](https://postman.postman.co/workspace/Postman-Hacktoberfest'21-~1ae1036b-6583-4883-949e-adf8b55687a1/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation)
 
-### Testing your API server 
-
-In the API-First approach, a collection of test requests been created based off of the Halloween Costume Contest API schema.
-
-You can fork the [test collection](https://www.postman.com/postman/workspace/postman-hacktoberfest-21/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation) in Postman to your own workspace. Then, update the `baseUrl` collection variable to the address of your API (ex: `http://localhost:3000` for a local server, or `https://my-deployed-api.herokuapp.com` if deployed) and save. 
-
-Now when you run the [collection runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/) on this collection, you will see which tests fail. The goal is to make all the tests pass by adding code to your project! This is called **Test Driven Development (TDD)**.
-
-#### How to start testing your API
-
-<a href="https://www.loom.com/share/95beb8de2dee474985875892aee707a9" target="_blank">
-  <img src="https://user-images.githubusercontent.com/9841162/135689591-20ef8002-0ae7-4b55-87d7-2d9236bf02c1.png" height="250px"/>
-</a>
-
-
-**Important**: the tests should be run in the order given in order to work.
 
 ### Getting started 
 
@@ -100,11 +84,27 @@ You can then chose one of four server frameworks to download the boiler code
 
 This will give you a place to start! You will still need to figure out how to persist data (for example by connecting a database).
 
+### Testing your API server 
+
+In the API-First approach, a collection of test requests been created based off of the Halloween Costume Contest API schema.
+
+You can fork the [test collection](https://www.postman.com/postman/workspace/postman-hacktoberfest-21/collection/15567703-96f91b20-f497-43aa-a7f9-f1443bdd3a71?ctx=documentation) in Postman to your own workspace. Then, update the `baseUrl` collection variable to the address of your API (ex: `http://localhost:3000` for a local server, or `https://my-deployed-api.herokuapp.com` if deployed) and save. 
+
+Now when you run the [collection runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/) on this collection, you will see which tests fail. The goal is to make all the tests pass by adding code to your project! This is called **Test Driven Development (TDD)**.
+
+#### How to use Test Driven Development (TDD) to Build your API Server
+
+<a href="https://www.loom.com/share/95beb8de2dee474985875892aee707a9" target="_blank">
+  <img src="https://user-images.githubusercontent.com/9841162/135689591-20ef8002-0ae7-4b55-87d7-2d9236bf02c1.png" height="250px"/>
+</a>
+
+**Important**: the tests should be run in the order given in order to work.
+
 #### Run tests periodically
 
 Use the collection runner to run the test collection against your API server. The goal is to get all of the tests to pass! 
 
-#### Make those pull requests!
+### Make those pull requests!
 
 When adding new changes and features to your server, be sure to make new git branches. When you are ready to add these changes into the main project, you can push the changes to the main GitHub repo, and any of the repo Maintainers can approve it and merge it in.
 
