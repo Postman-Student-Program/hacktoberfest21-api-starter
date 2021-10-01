@@ -41,6 +41,13 @@ You can fork the [test collection](https://www.postman.com/postman/workspace/pos
 
 Now when you run the [collection runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/) on this collection, you will see which tests fail. The goal is to make all the tests pass by adding code to your project! This is called **Test Driven Development (TDD)**.
 
+#### How to start testing your API
+
+<a href="https://www.loom.com/share/95beb8de2dee474985875892aee707a9" target="_blank">
+  <img src="https://user-images.githubusercontent.com/9841162/135689591-20ef8002-0ae7-4b55-87d7-2d9236bf02c1.png" height="250px"/>
+</a>
+
+
 **Important**: the tests should be run in the order given in order to work.
 
 ### Getting started 
@@ -74,7 +81,14 @@ You will need to have [git](https://git-scm.com/book/en/v2/Getting-Started-Insta
 
 You can chose any tech stack you like. If you've never built an API before or want a quick start, you can use Postman's API code genereator feature (in Beta) to download a boiler of the server code based on the API schema. 
 
-You can do this in Postman for web to access the Beta feature. First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman, click the `</>` icon to open the code generator.
+You can do this in Postman for web to access the Beta feature. 
+
+#### How to generate server code in Postman (Beta feature)
+<a href="https://loom.com/share/0ca1e2fc33634dc383a1220acaba5180" target="_blank">
+  <img src="https://user-images.githubusercontent.com/9841162/135689266-aff912f7-dd35-4abe-8dad-e16f62476274.png" height="250px"/>
+</a>
+
+First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman, click the `</>` icon to open the code generator.
 
 <img src="https://user-images.githubusercontent.com/9841162/134787853-c70d6aa7-c46b-485e-b5de-f0a0408182bf.png" height="200px"/>
 
