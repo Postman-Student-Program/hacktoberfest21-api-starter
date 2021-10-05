@@ -1,0 +1,23 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "description": "This is for Hacktober event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bimalesh-Seth/hacktoberfest21-api-starter.git"
+  },
+  "author": "Bimalesh Seth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bimalesh-Seth/hacktoberfest21-api-starter/issues"
+  },
+  "homepage": "https://github.com/Bimalesh-Seth/hacktoberfest21-api-starter#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
+}
