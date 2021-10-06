@@ -68,7 +68,7 @@ You can chose any tech stack you like. If you've never built an API before or wa
 You can do this in Postman for web to access the Beta feature. 
 
 #### How to generate server code in Postman (Beta feature)
-<a href="https://loom.com/share/0ca1e2fc33634dc383a1220acaba5180" target="_blank">
+<a href="https://www.loom.com/share/6704d6c44b944fb6ad039c5aba93141d" target="_blank">
   <img src="https://user-images.githubusercontent.com/9841162/135689266-aff912f7-dd35-4abe-8dad-e16f62476274.png" height="250px"/>
 </a>
 
