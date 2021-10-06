@@ -72,15 +72,28 @@ You can do this in Postman for web to access the Beta feature.
   <img src="https://user-images.githubusercontent.com/9841162/135689266-aff912f7-dd35-4abe-8dad-e16f62476274.png" height="250px"/>
 </a>
 
-First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman, click the `</>` icon to open the code generator.
+In order to generate server boiler code, you will need to copy the API schema and create a copy of the API in your own workspace.
 
+
+- First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman
+
+
+
+- Next, copy the whole schema in the "Definition" tab
+
+- Then create a new API in a workspace you own, from the "API" tab on the left menu in Postman
+
+- Paste the schema into your new API and hit "Save"
+
+- Now you can open the "Code" tab on the far right 
+- 
 <img src="https://user-images.githubusercontent.com/9841162/134787853-c70d6aa7-c46b-485e-b5de-f0a0408182bf.png" height="200px"/>
 
-You can then chose one of four server frameworks to download the boiler code 
+- Select the framework for generating your server boiler code  
 
 <img src="https://user-images.githubusercontent.com/9841162/134787901-33780432-fc4c-4d18-8c4b-7b5798eb5df5.png" height="200px"/>
 
-- [How to generate server code in Postman](https://learning.postman.com/docs/designing-and-developing-your-api/generating-server-code/)
+For more details see this page: [How to generate server code in Postman](https://learning.postman.com/docs/designing-and-developing-your-api/generating-server-code/)
 
 This will give you a place to start! You will still need to figure out how to persist data (for example by connecting a database).
 
