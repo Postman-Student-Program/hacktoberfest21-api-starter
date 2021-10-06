@@ -77,16 +77,16 @@ In order to generate server boiler code, you will need to copy the API schema an
 
 - First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman
 
-
-
 - Next, copy the whole schema in the "Definition" tab
+
+<img src="https://user-images.githubusercontent.com/9841162/136259463-0c49e7e1-69ab-44e2-a0ee-4b95ce31ed49.png" height="200px"/>
 
 - Then create a new API in a workspace you own, from the "API" tab on the left menu in Postman
 
 - Paste the schema into your new API and hit "Save"
 
 - Now you can open the "Code" tab on the far right 
-- 
+
 <img src="https://user-images.githubusercontent.com/9841162/134787853-c70d6aa7-c46b-485e-b5de-f0a0408182bf.png" height="200px"/>
 
 - Select the framework for generating your server boiler code  
