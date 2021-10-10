@@ -1,0 +1,20 @@
+{
+    "name": "postman-hacktoberfest",
+    "version": "1.0.0",
+    "description": "For Postman Raffle",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Omkaragrawal/hacktoberfest21-api-starter.git"
+    },
+    "author": "OMKAR AGRAWAL <omkaragrawal.dev>",
+    "license": "UNLICENSED",
+    "bugs": {
+      "url": "https://github.com/Omkaragrawal/hacktoberfest21-api-starter/issues"
+    },
+    "homepage": "https://github.com/Omkaragrawal/hacktoberfest21-api-starter#readme"
+  }
+  
