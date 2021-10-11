@@ -4,7 +4,7 @@
   "description": "Halloween Costume Contest API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js"
   },
   "keywords": [
     "Nodejs",
