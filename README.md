@@ -68,24 +68,16 @@ You can chose any tech stack you like. If you've never built an API before or wa
 You can do this in Postman for web to access the Beta feature. 
 
 #### How to generate server code in Postman (Beta feature)
-<a href="https://www.loom.com/share/6704d6c44b944fb6ad039c5aba93141d" target="_blank">
+<a href="https://www.loom.com/share/0ca1e2fc33634dc383a1220acaba5180" target="_blank">
   <img src="https://user-images.githubusercontent.com/9841162/135689266-aff912f7-dd35-4abe-8dad-e16f62476274.png" height="250px"/>
 </a>
 
 In order to generate server boiler code, you will need to copy the API schema and create a copy of the API in your own workspace.
 
 
-- First, go to the API and select the version `0.0.1`. Then, in the far right menu in Postman
+- First, go to the Halloween Costume Contest API and select the version `0.0.1`. 
 
-- Next, copy the whole schema in the "Definition" tab
-
-<img src="https://user-images.githubusercontent.com/9841162/136259463-0c49e7e1-69ab-44e2-a0ee-4b95ce31ed49.png" height="200px"/>
-
-- Then create a new API in a workspace you own, from the "API" tab on the left menu in Postman
-
-- Paste the schema into your new API and hit "Save"
-
-- Now you can open the "Code" tab on the far right 
+- Next click the Code Generation icon (`</>`) in the far right menu
 
 <img src="https://user-images.githubusercontent.com/9841162/134787853-c70d6aa7-c46b-485e-b5de-f0a0408182bf.png" height="200px"/>
 
