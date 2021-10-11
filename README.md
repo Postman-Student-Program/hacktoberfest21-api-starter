@@ -24,6 +24,8 @@ Go to your command line and execute the following commands
 
  You will need to configure your MongoDB database URI in .env file and add it to base directory.
  
+ ## Deployment
+ Link: https://halloween-contest.herokuapp.com/
 
 
 --------
