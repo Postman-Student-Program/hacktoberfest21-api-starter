@@ -13,12 +13,14 @@
 - NodeJS
 
 ## Installation
+Go to your command line and execute the following commands
+1. `git clone https://github.com/Rosh9532/hacktoberfest21-api-starter.git`
+2. `npm install`
+3. `node src/server.js`
 
-1. `npm install`
-2. `node src/server.js`
+ You will need to configure your MongoDB database URI in .env file and add it to base directory.
+ 
 
- You will need to configure your MongoDB database URI in .env file.
-> - Project roadmap
 
 --------
 
