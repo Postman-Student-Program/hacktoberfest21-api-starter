@@ -6,6 +6,10 @@
 - In API-first approach, we define an API before writing any code for a server or frontend. 
 - The routes, parameters, responses, and other traits of an API can be clearly defined with a schema.
 
+## About
+- This repository represents the server side code consisting of various API Endpoints that allows users to add, read, update and delete
+  Halloween costume party contestants.
+
 ## Technologies
 
 - MongoDB
