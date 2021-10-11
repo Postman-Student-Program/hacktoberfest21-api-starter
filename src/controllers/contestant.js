@@ -1,6 +1,6 @@
 const Contestant = require("../models/contestant");
 
-// @route POST/routes/
+// @route GET/routes/
 // @desc gets the api status
 // @params none
 // @permission all
