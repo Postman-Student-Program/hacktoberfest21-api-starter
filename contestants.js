@@ -178,7 +178,8 @@ router.post(
   async (req, res) => {
     try {
       const error = validationResult(req).errors;
-      //console.log(error);
+      // console.log(req);
+      // console.log(req.body, "is request body", error);
       if (error.length !== 0) {
         //400 means bad request, 200 is all ok
 
@@ -199,7 +200,7 @@ router.post(
       await user.save();
       return res.status(201).json({ status: "ok", id: user._id });
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       const err = {
         status: 500,
         message: "Something went wrong",
