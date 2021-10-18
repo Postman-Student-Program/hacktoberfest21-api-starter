@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const db =
-  "mongodb+srv://admin:admin@halloweenpostman.yojhy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+require("dotenv").config();
+
+const db = process.env.MONGO_URI;
 //this because the new norm is using async await promises, since they look synchronous, even though in reality its async
 const connectDB = async () => {
   try {

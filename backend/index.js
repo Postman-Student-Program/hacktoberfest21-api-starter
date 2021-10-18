@@ -1,5 +1,7 @@
 const express = require("express");
 const connectDB = require("./db");
+const helmet = require("helmet");
+require("dotenv").config();
 
 const app = express();
 
@@ -7,11 +9,12 @@ const app = express();
 connectDB();
 
 app.use(express.json({ extended: false }));
+app.use(helmet());
 
 app.get("/", (req, res) => {
   return res.status(200).json({
     status: "OK",
-    message: "API UP & Running"
+    message: "API UP & Running",
   });
 });
 
