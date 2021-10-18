@@ -2,7 +2,7 @@ const express = require("express");
 const connectDB = require("./db");
 const helmet = require("helmet");
 require("dotenv").config();
-
+const router = require("./contestants");
 const app = express();
 
 //Connect to DB
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/contestants", require("./contestants"));
+app.use("/contestants", router);
 
 const PORT = process.env.PORT || 5000;
 
