@@ -3,11 +3,13 @@ const connectDB = require("./db");
 const helmet = require("helmet");
 require("dotenv").config();
 const router = require("./contestants");
+const cors = require("cors");
 const app = express();
 
 //Connect to DB
 connectDB();
 
+app.use(cors());
 app.use(express.json({ extended: false }));
 app.use(helmet());
 
