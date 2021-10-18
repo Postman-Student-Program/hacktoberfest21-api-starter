@@ -4,13 +4,9 @@
   "builds": [
     { "src": "index.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.js" },
-    { "src": "/contestants", "dest": "/contestants.js" }
-  ],
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
