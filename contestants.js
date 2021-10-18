@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const Contestant = require("./schema/Contestant");
+const cors = require("cors");
 
 /**
  * @route : GET /contestants
@@ -167,6 +168,7 @@ router.delete("/:id", async (req, res) => {
  */
 router.post(
   "/",
+  cors(),
   [
     check("name", "Name is required").not().isEmpty(),
     check("costumeTitle", "Costume Title is required").not().isEmpty(),
