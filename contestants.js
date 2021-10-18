@@ -168,7 +168,6 @@ router.delete("/:id", async (req, res) => {
  */
 router.post(
   "/",
-  cors(),
   [
     check("name", "Name is required").not().isEmpty(),
     check("costumeTitle", "Costume Title is required").not().isEmpty(),
