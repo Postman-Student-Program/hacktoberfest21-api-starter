@@ -8,7 +8,6 @@ const connectDB = async () => {
     await mongoose.connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useMongooseClient: true
     });
 
     //There are even more properties of promise to this await, but we ll add them later
