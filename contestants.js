@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
     //console.log(allcontestants, arr);
     return res.json(arr);
   } catch (error) {
-    //console.log(error);
+    console.log(error);
     const err = {
       status: 500,
       message: "Something went wrong",
@@ -59,7 +59,7 @@ router.get("/:id", async (req, res) => {
     };
     return res.json(toreturn);
   } catch (error) {
-    //console.log(error);
+    console.log(error);
     const err = {
       status: 500,
       message: "Something went wrong",
@@ -125,7 +125,7 @@ router.patch(
       });
       // @TODO: Add case of check validation in patch body, can update other fields too
     } catch (error) {
-      //console.log(error);
+      console.log(error);
       const err = {
         status: 500,
         message: "Something went wrong",
@@ -153,6 +153,7 @@ router.delete("/:id", async (req, res) => {
 
     res.status(200).json({ status: "ok" });
   } catch (error) {
+    console.log(error);
     const err = {
       status: 500,
       message: "Something went wrong",
@@ -200,7 +201,7 @@ router.post(
       await user.save();
       return res.status(201).json({ status: "ok", id: user._id });
     } catch (error) {
-      //console.log(error);
+      console.log(error);
       const err = {
         status: 500,
         message: "Something went wrong",
@@ -243,7 +244,7 @@ router.patch("/:id/upvote", async (req, res) => {
     });
     // @TODO: Add case of check validation in patch body, can update other fields too
   } catch (error) {
-    //console.log(error);
+    console.log(error);
     const err = {
       status: 500,
       message: "Something went wrong",
