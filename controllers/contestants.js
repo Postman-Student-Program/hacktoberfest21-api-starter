@@ -1,3 +1,4 @@
+const Joi = require("joi");
 const contestantModel = require("../models/contestants");
 
 const getContestantsHandler = (req, res) => {
@@ -21,15 +22,48 @@ const getContestantHandler = (req, res) => {
 
 const createContestantHandler = (req, res) => {
   const { body } = req;
-  const id = contestantModel.createContestant(body);
-  return res
-    .status(201)
-    .send({ status: "Contestant created successfully", id: id });
+  const schema = Joi.object({
+    name: Joi.string().required(),
+    costumeTitle: Joi.string().required(),
+    costumeImgUrl: Joi.string().required(),
+    city: Joi.string().required(),
+    country: Joi.string().required(),
+  });
+
+  const { error, value } = schema.validate(body);
+
+  if (error) {
+    return res
+      .status(400)
+      .send({ status: "error", message: error.details[0].message });
+  } else {
+    const id = contestantModel.createContestant(body);
+    return res
+      .status(201)
+      .send({ status: "Contestant created successfully", id: id });
+  }
 };
 
 const updateContestantHandler = (req, res) => {
   const { id } = req.params;
   const { body } = req;
+
+  const schema = Joi.object({
+    name: Joi.string(),
+    costumeTitle: Joi.string(),
+    costumeImgUrl: Joi.string(),
+    city: Joi.string(),
+    country: Joi.string(),
+  });
+
+  const { error, value } = schema.validate(body);
+
+  if (error) {
+    return res
+      .status(400)
+      .send({ status: "error", message: error.details[0].message });
+  }
+
   const result = contestantModel.updateContestant(id, body);
   if (result) {
     return res.send({ status: "ok" });
