@@ -26,6 +26,7 @@ const createContestantHandler = (req, res) => {
     .status(201)
     .send({ status: "Contestant created successfully", id: id });
 };
+
 const updateContestantHandler = (req, res) => {
   const { id } = req.params;
   const { body } = req;
@@ -38,6 +39,7 @@ const updateContestantHandler = (req, res) => {
       .send({ status: "error", message: "Contestant not found" });
   }
 };
+
 const deleteContestantHandler = (req, res) => {
   const { id } = req.params;
   const result = contestantModel.deleteContestant(id);
@@ -49,6 +51,7 @@ const deleteContestantHandler = (req, res) => {
       .send({ status: "error", message: "Contestant not found" });
   }
 };
+
 const upvoteContestantHandler = (req, res) => {
   const { id } = req.params;
   const result = contestantModel.upvoteContestant(id);
