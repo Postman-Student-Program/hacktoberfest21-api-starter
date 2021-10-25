@@ -1,26 +1,30 @@
 const Joi = require("joi");
-const contestantModel = require("../models/contestants");
+const mongoose = require("mongoose");
+const Contestant = require("../models/contestants");
 
-const getContestantsHandler = (req, res) => {
-  const contestants = contestantModel.getContestants();
+const getContestantsHandler = async (req, res) => {
+  const contestants = await Contestant.find();
   return res.send(contestants);
 };
 
-const getContestantHandler = (req, res) => {
+const getContestantHandler = async (req, res) => {
   const { id } = req.params;
 
-  const contestant = contestantModel.getContestant(id);
+  let contestant;
+  if (mongoose.isValidObjectId(id)) {
+    contestant = await Contestant.findById(id);
+  }
 
-  if (contestant.length == 0) {
+  if (contestant) {
+    return res.send(contestant);
+  } else {
     return res
       .status(404)
       .send({ status: "error", message: "Contestant not found" });
-  } else {
-    return res.send(contestant[0]);
   }
 };
 
-const createContestantHandler = (req, res) => {
+const createContestantHandler = async (req, res) => {
   const { body } = req;
   const schema = Joi.object({
     name: Joi.string().required(),
@@ -37,14 +41,15 @@ const createContestantHandler = (req, res) => {
       .status(400)
       .send({ status: "error", message: error.details[0].message });
   } else {
-    const id = contestantModel.createContestant(body);
+    const contestant = new Contestant(body);
+    await contestant.save();
     return res
       .status(201)
-      .send({ status: "Contestant created successfully", id: id });
+      .send({ status: "Contestant created successfully", id: contestant._id });
   }
 };
 
-const updateContestantHandler = (req, res) => {
+const updateContestantHandler = async (req, res) => {
   const { id } = req.params;
   const { body } = req;
 
@@ -64,8 +69,12 @@ const updateContestantHandler = (req, res) => {
       .send({ status: "error", message: error.details[0].message });
   }
 
-  const result = contestantModel.updateContestant(id, body);
-  if (result) {
+  let contestant;
+  if (mongoose.isValidObjectId(id)) {
+    contestant = await Contestant.findByIdAndUpdate(id, body, { new: true });
+  }
+
+  if (contestant) {
     return res.send({ status: "ok" });
   } else {
     return res
@@ -74,10 +83,15 @@ const updateContestantHandler = (req, res) => {
   }
 };
 
-const deleteContestantHandler = (req, res) => {
+const deleteContestantHandler = async (req, res) => {
   const { id } = req.params;
-  const result = contestantModel.deleteContestant(id);
-  if (result) {
+
+  let contestant;
+  if (mongoose.isValidObjectId(id)) {
+    contestant = await Contestant.findByIdAndDelete(id);
+  }
+
+  if (contestant) {
     return res.send({ status: "ok" });
   } else {
     return res
@@ -86,11 +100,20 @@ const deleteContestantHandler = (req, res) => {
   }
 };
 
-const upvoteContestantHandler = (req, res) => {
+const upvoteContestantHandler = async (req, res) => {
   const { id } = req.params;
-  const result = contestantModel.upvoteContestant(id);
-  if (result[0]) {
-    return res.send({ status: "ok", votes: result[1] });
+
+  let contestant;
+  if (mongoose.isValidObjectId(id)) {
+    contestant = await Contestant.findByIdAndUpdate(
+      id,
+      { $inc: { votes: 1 } },
+      { new: true }
+    );
+  }
+
+  if (contestant) {
+    return res.send({ status: "ok", votes: contestant.votes });
   } else {
     return res
       .status(404)
