@@ -2,6 +2,8 @@ const express = require("express"),
   app = express(),
   config = require("config"),
   mongoose = require("mongoose"),
+  cors = require("cors"),
+  helmet = require("helmet"),
   port = process.env.PORT || 3000,
   host = process.env.HOST || "http://localhost",
   contestants = require("./routes/contestants");
@@ -19,9 +21,13 @@ mongoose
   })
   .catch((err) => console.log(err));
 
+app.use(cors());
+
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
+
+app.use(helmet());
 
 app.get("/", (req, res) => {
   return res.status(200).send({ status: "ok" });
