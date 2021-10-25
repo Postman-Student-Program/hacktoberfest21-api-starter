@@ -27,6 +27,10 @@ const contestantSchema = new mongoose.Schema({
   },
 });
 
+contestantSchema.virtual("id").get(function () {
+  return this._id;
+});
+
 const Contestant = mongoose.model("Contestant", contestantSchema);
 
 module.exports = Contestant;

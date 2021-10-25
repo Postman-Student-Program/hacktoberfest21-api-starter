@@ -3,7 +3,21 @@ const mongoose = require("mongoose");
 const Contestant = require("../models/contestants");
 
 const getContestantsHandler = async (req, res) => {
-  const contestants = await Contestant.find();
+  const contestants = await Contestant.aggregate([
+    {
+      $project: {
+        _id: 0,
+        id: "$_id",
+        name: 1,
+        costumeTitle: 1,
+        costumeImgUrl: 1,
+        city: 1,
+        country: 1,
+        votes: 1,
+      },
+    },
+  ]);
+
   return res.send(contestants);
 };
 
@@ -12,7 +26,12 @@ const getContestantHandler = async (req, res) => {
 
   let contestant;
   if (mongoose.isValidObjectId(id)) {
-    contestant = await Contestant.findById(id);
+    contestant = await Contestant.findById(id, " -__v");
+    if (contestant) {
+      contestant = contestant._doc;
+      contestant.id = contestant._id;
+      delete contestant._id;
+    }
   }
 
   if (contestant) {
