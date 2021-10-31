@@ -16,7 +16,7 @@ const express = require('express'),
     NODE_ENV = process.env.NODE_ENV || 'development';
     
     // connect to mongo db and log to console
-    console.log(process.env.MONGODB_URI);
+    //console.log(process.env.MONGODB_URI);
     mongoose.connect(process.env.MONGODB_URI);
     const db = mongoose.connection
     db.on('error', error => console.log(error))
