@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+    }    
 const express = require('express'),
     cookieParser = require('cookie-parser'),
     mongoose = require('mongoose');
@@ -12,19 +15,19 @@ const express = require('express'),
     PORT = process.env.PORT || 3000,
     NODE_ENV = process.env.NODE_ENV || 'development';
     
-    
     // connect to mongo db and log to console
-    mongoose.connect('mongodb://localhost/halloween');
-    mongoose.connection.on('connected', () => {
-        console.log('Mongoose connected to ' + mongoose.connection.name);
-    });
-    
+    console.log(process.env.MONGODB_URI);
+    mongoose.connect(process.env.MONGODB_URI);
+    const db = mongoose.connection
+    db.on('error', error => console.log(error))
+    db.once('open', () => console.log('Connected to Mongoose '+ mongoose.connection.name));
+
     
     app.set('port', PORT);
     app.set('env', NODE_ENV);
     
-app.use(cors());
-app.use(log('tiny'));
+    app.use(cors());
+    app.use(log('tiny'));
 
 // parse application/json
 app.use(express.json());
