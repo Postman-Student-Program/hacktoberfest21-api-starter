@@ -1,0 +1,19 @@
+{
+    "name": "HalloweenCostumeContestAPI",
+    "version": "1.0.0",
+    "description": "NodeJS Express Boilerplate",
+    "main": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "dependencies": {
+        "cookie-parser": "1.4.5",
+        "cors": "2.8.5",
+        "express": "4.17.1",
+        "mongoose": "^6.0.12",
+        "morgan": "1.10.0",
+        "multer": "1.4.2",
+        "nodemon": "^2.0.14"
+    }
+}
